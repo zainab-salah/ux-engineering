@@ -14,4 +14,4 @@ The project combines backend contract interpretation, user-task reasoning, compo
 
 The initial independent comparison tied on the scored relationship scenario. I documented that result and the untested areas rather than claiming an unproven improvement. The next step is broader paired evaluations and real implementation/usability testing.
 
-Status: prepared for open-source publication; add the real repository URL after publishing. Do not describe this as a published project, production deployment or proven productivity improvement until those claims are supported.
+Source: [zainab-salah/ux-engineering](https://github.com/zainab-salah/ux-engineering). The repository is open source; production deployment and productivity improvements have not been established.

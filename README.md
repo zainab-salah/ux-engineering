@@ -88,4 +88,4 @@ python3 scripts/score.py evals/results/grades.json
 
 The validator checks this package's expected frontmatter, portable local references and evaluation fixtures. It is intentionally not a complete YAML/Agent Skills validator or a usability scorer. CI runs the same checks. The adapter example demonstrates IDs/codes, omission/null and write permissions; it is not production-ready form infrastructure.
 
-Contributions: [CONTRIBUTING.md](CONTRIBUTING.md). License: [MIT](LICENSE). The package is prepared for publication; no GitHub repository, release or registry listing is implied.
+Contributions: [CONTRIBUTING.md](CONTRIBUTING.md). License: [MIT](LICENSE). Source: [zainab-salah/ux-engineering](https://github.com/zainab-salah/ux-engineering). No release or registry listing has been created.
