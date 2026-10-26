@@ -16,11 +16,30 @@ Use one primary page title. A breadcrumb, page title, card title and table capti
 - On detail pages, group related account information in one compact workspace. Move a deep revisitable account task to a dedicated page instead of stacking every endpoint's full output on the client page.
 - Avoid excessive top/bottom padding, repeated empty-state panels, arbitrary minimum heights and oversized headings in operational screens. Keep breathing room where it supports scanning.
 
-## Inner-page height and pagination
+## Full-height table pages: visible footer, scrolling rows
 
-Inspect the full ancestor chain when a short table leaves a gap or a footer floats in the middle: viewport shell → page area → table region → scroller → pagination. In a flex layout, an existing pattern such as `flex: 1` with `min-height: 0` may be appropriate; do not blindly use `100vh` inside a shell that already includes a header.
+For operational dashboards and admin lists, use a viewport-fitted shell by default when this matches the product's working table pages. Keep the page header, filters/actions and footer/pagination visible. The rows scroll inside a bounded middle region; users should not need to scroll the whole document to reach the next-page controls. Preserve the available table height when filters, panels or navigation change.
 
-For a full-height operational table, let the table region fill the available space and place pagination consistently at its bottom. For a content-length page, normal document flow may be correct. Do not add fixed footers that cover rows, validation messages or the mobile keyboard. Keep horizontal table scrolling scoped to the table, not the whole page.
+Inspect the full ancestor chain: viewport shell → page area → table panel → scroll wrapper → rows. Each shrinking flex/grid ancestor needs an appropriate minimum size, commonly `min-height: 0` and `min-width: 0`. Reuse the existing full-height table component rather than adding a second page shell. Do not put a new `100vh` region below an existing app header; account for the shell's actual available space, using dynamic viewport units at the shell boundary when appropriate.
+
+The structural pattern is:
+
+```text
+Viewport-fitted application shell
+  Header / navigation                    stays visible
+  Page area                              fills remaining height
+    Title / filters / actions            stays visible
+    Table panel                          grows and can shrink
+      Table scroll wrapper               overflow: auto; min-height: 0
+        Table headings / rows            rows scroll here
+    Pagination / page footer             stays visible, outside scroller
+```
+
+Keep semantic table markup inside a scrolling wrapper; `overflow` on a table element itself is not a dependable shell. Sticky column headings can remain inside that wrapper so they stay aligned during horizontal scrolling. Give a keyboard-scrollable region an appropriate name/focus path where needed. Menus must escape the scroller through the established portal/top-layer pattern rather than being clipped by it.
+
+This is a layout allocation, not a fixed overlay: the footer occupies its own row and must not cover data, focus or validation. Short/empty/loading/error tables should still place it consistently at the panel bottom. On narrow or very short screens, zoom or a virtual keyboard may make the full stack impossible to fit. Adapt the toolbar and allow a deliberate fallback scroll path so every control remains reachable; never conceal overflow or shrink text to force the pattern. Reading pages, long forms and marketing pages may correctly use normal document flow.
+
+Verify with enough rows to overflow: scroll to the last row and back, while confirming that the toolbar and footer remain in view. Also check a few rows, no results, page-size changes, wrapped filters, narrow/short viewports, zoom and keyboard focus. Record which region actually scrolls and whether the footer is visible; a desktop screenshot alone does not prove this behavior.
 
 ## Borders and themes
 
@@ -34,6 +53,7 @@ Check a narrow mobile viewport, a medium viewport, a wide viewport, zoom/reflow,
 
 - No page-level sideways overflow; a two-dimensional table may use its own scroll region.
 - No clipped dropdown, trapped field, overlapping sticky action, or unreachable pagination.
+- On full-height table pages, the footer/pagination stays visible while rows scroll internally; short/empty states retain the same footer position.
 - Short and long tables, empty and error content, open selectors and dialogs.
 - Related controls share size/alignment; spacing is intentional at each breakpoint.
 - Repeated titles and error messages are removed without losing context.

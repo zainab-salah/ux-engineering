@@ -22,6 +22,16 @@ Count is a clue, not a universal threshold. Three unfamiliar, consequential plan
 
 Use a select when users can scan a stable, manageable list. Prefer a combobox when users know a name to find, the list changes, or there are many similar choices. A search field accepting arbitrary text is different from a closed-set combobox. Explain whether unlisted values are allowed. Reuse the existing accessible pattern; adding a text field inside a select popup does not automatically create an accessible combobox.
 
+## Apply the decision in create and edit forms
+
+Inspect each writable field's meaning before rendering it. If valid choices already exist, offer them instead of asking users to remember or type a code/name. Examples: country names mapped to verified country codes; a scoped searchable owner picker mapped to IDs; visible role choices when comparing a few permitted roles; a repeatable editor for structured items. The same relationship should use a consistent control across create and edit unless the task differs.
+
+Country and preferred time zone are common examples: when the server accepts a known catalogue, implement a searchable selector with human-readable names rather than a plain text box requiring a code or `Region/City` string. Keep selection separate from search text, hydrate the stored code/zone on edit, and allow clearing only when the contract permits it. Do not turn an open-ended territory into a country list merely because its label sounds geographic.
+
+When implementation is requested, replace the unsuitable control and complete its loading, selection, clearing, validation and payload behavior; do not stop at a recommendation. Initialize edits with the stored selection even when it is not in the current search page. Preserve IDs/codes, nullable versus omitted semantics, permissions and existing data. If a lookup source or choice rule is missing, establish that contract rather than inventing a list.
+
+Keep names, notes, descriptions, unknown external references and other genuinely open-ended values as text. A suggestion list must not silently become a restriction. A disabled/read-only field may need a display value rather than any input. Choose the simplest suitable shared control; a custom combobox is not automatically better than a native select.
+
 ## Checkbox or switch?
 
 Ask when the effect happens. A checkbox fits an option submitted with other form values, independent multi-selection, and consent. A switch often communicates an immediate on/off setting; make its saving behavior clear and restore the last confirmed state on failure. Some established design systems use switches within saved settings forms: preserve that documented convention and make the deferred effect explicit. A derived boolean belongs in a status display.

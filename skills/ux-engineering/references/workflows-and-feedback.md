@@ -13,6 +13,18 @@ Read permissions at page, action and field levels. A writable phone field should
 - If an advanced field overrides another, show that relationship at the point of editing. Keep the overridden draft available unless the user explicitly clears it. Preserve API-required fields even if they are currently inactive.
 - Conditional fields should appear at the relevant point and expose requiredness. Decide what happens to hidden values based on contract semantics; do not silently erase data or submit stale hidden values.
 
+## Clear interfaces need less explanation
+
+Use recognizable controls, specific labels, logical grouping and an obvious primary action before adding instructional prose. If users need a paragraph to understand ordinary navigation or a simple form, fix the interaction first.
+
+- Remove generic introductions such as “Manage your products here” under a Products heading, motivational taglines, duplicate panel subtitles and helper text that merely repeats a label or button.
+- Avoid adding a description beneath every field, card, section or action. Start with a clear label and add help only for a demonstrated ambiguity or error risk.
+- Use explicit action names such as “Create client” instead of a vague “Continue” plus a paragraph explaining it. Put a short constraint where it matters rather than a large instructional banner above the form.
+- Keep essential information: requiredness, accepted formats, units/timezones, unusual validation, cross-field overrides, permission blockers, destructive scope, persistence limits and actionable errors. Removing a prompt-override warning would conceal behavior; removing “Enter the name here” under Name removes repetition.
+- Preserve persistent labels and accessible names. Icons, placeholders and tooltips do not automatically replace them. Do not hide necessary help behind hover-only interaction.
+
+During review, read each description and ask what specific uncertainty or mistake it addresses. Delete or shorten copy with no answer. If the action remains unclear afterward, improve its label, placement or control rather than restoring a wall of instructions. Record product-specific legal or policy text as a constraint before changing it.
+
 ## State contract
 
 | State | Expected behavior |

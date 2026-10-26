@@ -40,3 +40,7 @@ Impeccable/gpt-taste/Designly source comparison added conditional resilience/sco
 ## Executable showcase addition
 
 Added `evals/showcase` with independent baseline and skill-assisted refinement artifacts, frozen source hashes and a predeclared browser protocol. Four new fixture tests bring the Python suite to nine tests (plus three Node adapter tests). Fourteen live HTTP assertions passed across the isolated variants. Browser access remained disabled, so UI acceptance checks/screenshots remain pending. See `evals/showcase/RESULTS.md`; no runtime UI improvement is claimed.
+
+## Guidance update after the demo review
+
+The public-API React comparison was removed at the maintainer’s request; it is not evidence for the current revision. The skill now explicitly requires viewport-fitted operational table shells with internal row scrolling and visible pagination/footer, implementation of suitable create/edit controls (including searchable country/time-zone selectors), and restrained explanatory copy. The existing layout/ambiguous fixtures were updated but not behaviorally rerun. Package checks and regression tests validate packaging/tooling only.

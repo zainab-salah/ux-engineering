@@ -16,6 +16,7 @@ In Django REST framework, `required=False`, `allow_null=True`, `allow_blank=True
 | Foreign key | Native select for a few known records; searchable relationship picker for many | Display names and useful context; submit the stable key. Derive tenant/company where the server owns it. No manual ID entry for ordinary lookup tasks. |
 | Boolean | Checkbox, switch, read-only state | Deferred form choice vs immediate setting vs system state. Explain saving behavior. An immediate toggle needs pending/failure rollback. |
 | Date / timestamp | Typed date, date picker, date-time with zone, formatted read-only value | Birthdates should not require decades of calendar paging. Scheduling needs timezone and invalid/past-time handling. Do not turn a local date into a shifted UTC date. |
+| Country / time-zone vocabulary | Searchable country or time-zone selector when the supported list is too long to scan | Show readable names and useful context; submit the verified country code or IANA zone ID. Use the backend's accepted vocabulary, not arbitrary display labels or UTC offsets as zone identities. |
 | Array of choices | Checkbox group, multi-select, removable selected tokens | Zero/one/many, duplicates, order, and maximum size matter. Tags created freely are different from controlled permissions. |
 | Array of objects | Repeatable structured rows or sections | Stable row keys, add/remove, nested errors, reordering and payload order. Avoid raw JSON for nontechnical tasks. |
 | Nested object | Grouped fields or a task flow | Determine whether writes are nested or use separate endpoints. Do not assume atomicity across several requests. |
@@ -34,5 +35,7 @@ In Django REST framework, `required=False`, `allow_null=True`, `allow_blank=True
 ## Worked decision
 
 `country: string, maxLength=2` is not enough to invent a country catalogue. If validation confirms ISO alpha-2 and an approved list is available, offer localized country names, preserve a stored legacy code visibly, and submit the two-letter code. If the field is actually a free-form sales territory, preserve text. For an expert import-mapping tool, a validated code input with name suggestions may be appropriate.
+
+For a preferred time zone constrained to IANA identifiers, use a searchable single-choice control backed by the accepted zone catalogue. Let users search familiar city/region names, display a friendly label such as “Istanbul — Europe/Istanbul,” and submit `Europe/Istanbul`. An offset can help compare choices, but calculate it for the relevant date and do not substitute it for the zone ID: daylight-saving rules can change offsets. Preserve an existing accepted alias or unavailable saved zone visibly until reconciled. A country may contain several zones; do not silently replace the user's zone when country changes. If the product deliberately scopes zones by country, make that dependency clear and validate it against the actual contract.
 
 Sources: [DRF fields](https://www.django-rest-framework.org/api-guide/fields/), [OpenAPI 3.1.1](https://spec.openapis.org/oas/v3.1.1.html). These explain contracts; the interaction choices above are this project's synthesis.

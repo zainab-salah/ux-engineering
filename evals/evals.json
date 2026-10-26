@@ -35,7 +35,7 @@
       "files": [
         "fixtures/layout-audit.html"
       ],
-      "expected_output": "Unnecessary scrolling and repeated titles reduced, related toolbar items aligned and wrapped, shared compact controls, correct table/footer height reasoning, focus retained, borders consistent without universal aesthetic rules."
+      "expected_output": "Unnecessary scrolling and repeated titles reduced, related toolbar items aligned and wrapped, shared compact controls, correct table/footer height reasoning, focus retained, borders consistent without universal aesthetic rules. Operational table rows scroll inside a bounded region while the header, toolbar and footer/pagination remain visible; short and empty states keep a consistent footer position without overlays."
     },
     {
       "id": 5,
@@ -44,7 +44,7 @@
       "files": [
         "fixtures/ambiguous-fields.md"
       ],
-      "expected_output": "Open references/territory remain text, exact numeric priority remains precise, deferred enabled choice clear, costly plan no guessed default, copyable system ID and scoped unknowns."
+      "expected_output": "Open references/territory remain text, exact numeric priority remains precise, deferred enabled choice clear, costly plan no guessed default, copyable system ID and scoped unknowns. Remove helper text that merely repeats labels; retain the numeric range and meaningful plan consequences. Recommendations become actual control/payload changes when implementation is requested."
     },
     {
       "id": 6,

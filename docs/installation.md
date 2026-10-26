@@ -19,13 +19,19 @@ test ! -e /path/to/your-project/.agents/skills/ux-engineering && cp -R skills/ux
 
 For a personal installation, use the skill directory recognized by your agent (for example `~/.agents/skills` or Codex's configured skills directory). Existing installations should be reviewed before replacement. The portable entry point is `SKILL.md`; `agents/openai.yaml` adds Codex UI metadata.
 
-## Direct npm package — prepared, not published
+## Direct npm package
 
-The repository contains a dependency-free package installer for the proposed name `@zainab-salah/ux-engineering`. Registry publication is pending npm authentication and confirmation of the account/scope. Do not treat an npm command for that name as available yet.
+The dependency-free package is published as `@zainab-salah/ux-engineering`:
+
+```sh
+npx @zainab-salah/ux-engineering
+```
+
+Run it from your project to install the skill. Use `--global` for a personal installation.
 
 To test the installer from a clone, run `node bin/install.mjs` in the target project via its absolute path. It copies the skill to `.agents/skills/ux-engineering`, refuses to overwrite an existing destination and runs no installation hooks. `--global` selects `~/.agents/skills/ux-engineering`; `--dest /absolute/path/to/ux-engineering` selects an explicit skill folder. No other project files are changed.
 
-After registry publication, the same installer can be run through `npx @zainab-salah/ux-engineering`. The package allowlist includes only the installer, skill, README, package metadata and license; private research, evaluation outputs and app examples are excluded.
+The same installer is available through `npx @zainab-salah/ux-engineering`. The package allowlist includes only the installer, skill, README, package metadata and license; private research, evaluation outputs and app examples are excluded.
 
 ## Development checks
 

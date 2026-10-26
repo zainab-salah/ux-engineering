@@ -47,7 +47,7 @@
       "Identify excess padding and duplicate headings",
       "Align/wrap related toolbar items",
       "Use existing control size/border tokens",
-      "Reason through shell/table/footer heights",
+      "Require internal row scrolling with header/toolbar/footer visible; verify short and overflowing tables",
       "Restore focus and labels",
       "Distinguish static findings from rendered checks"
     ],
@@ -57,7 +57,7 @@
       "Make deferred enabled setting clear",
       "No default for consequential plan",
       "Retain copyable read-only ID",
-      "Identify essential action unknowns without fabricating APIs"
+      "Identify essential action unknowns without fabricating APIs; remove redundant help without losing essential labels, constraints or consequences"
     ],
     "6": [
       "Use stable paginated comparison and return state",

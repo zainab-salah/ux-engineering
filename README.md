@@ -10,10 +10,12 @@ After five years of building interfaces, I wanted to put that experience into so
 
 ## What it helps with
 
-- Choosing inputs, dropdowns and relationship selectors.
+- Choosing and implementing suitable inputs, dropdowns and relationship selectors.
 - Building complete forms, tables and admin workflows.
 - Preserving API rules, validation and permissions.
 - Fixing wasted space, repeated headings and inconsistent controls.
+- Keeping table footers visible while rows scroll inside the table.
+- Removing unnecessary descriptions while keeping useful labels and feedback.
 - Handling errors, loading states, keyboard access and smaller screens.
 
 Use it before building a feature or to review an existing interface. It works across frameworks, with examples for React, Next.js, TypeScript, shadcn/ui and Django APIs.
@@ -21,10 +23,10 @@ Use it before building a feature or to review an existing interface. It works ac
 ## Install
 
 ```sh
-npx skills add zainab-salah/ux-engineering --skill ux-engineering
+npx @zainab-salah/ux-engineering
 ```
 
-The installer lets you choose your agent and installation scope. See [manual installation](docs/installation.md) for other options.
+Run it from your project. Add `--global` for a personal install. The [installation guide](docs/installation.md) also covers the Skills CLI and manual setup.
 
 ## Use
 
@@ -38,24 +40,11 @@ Use $ux-engineering to review this page.
 Find usability problems and fix them while keeping the existing theme.
 ```
 
-## Examples and testing
+## Testing
 
-The [before-and-after demo](evals/showcase/RESULTS.md) includes a customer workspace with 137 synthetic clients. Both versions are available to run. Browser screenshots are still pending.
+The project includes realistic form and table scenarios, package checks and recorded agent evaluations. The initial small comparison tied with and without the skill; there is no proven improvement percentage.
 
-### Before and after: a React app on a public API
-
-Same prompt, same API ([DummyJSON products](https://dummyjson.com/docs/products)), same 1280×800 viewport. Left: built without the skill. Right: revised with it.
-
-| Without the skill | With the skill |
-|---|---|
-| <img src="evals/public-api-react/screenshots/baseline-desktop-list.png" width="420" alt="Baseline product list: sidebar, four stat cards and a banner push the table down, showing two rows"> | <img src="evals/public-api-react/screenshots/with-skill-desktop-list.png" width="420" alt="Revised product list: one header, one-line summary and a toolbar, with about eight rows visible"> |
-| <img src="evals/public-api-react/screenshots/baseline-desktop-add-form.png" width="420" alt="Baseline add form with the Save and Cancel buttons cut off at the bottom"> | <img src="evals/public-api-react/screenshots/with-skill-desktop-add-form.png" width="420" alt="Revised add form with required and optional fields marked and the buttons visible"> |
-
-The revision shows about eight table rows instead of two on the first screen, keeps the form buttons visible, and adds draft recovery after a failed save and clear "simulated write" messaging. The baseline's dropdown for categories was already reasonable, and the revised sort control still looks different from the other controls.
-
-This is one run with extra confounders (a second pass plus a best-practice instruction), so it is a demonstration, not a benchmark. See [mobile views, source for both apps and everything not measured](evals/public-api-react/RESULTS.md).
-
-The first small agent comparison scored equally with and without the skill. I’m keeping the results public rather than claiming an improvement that hasn’t been demonstrated. Read the [test results](evals/results/REPORT.md) or [testing method](evals/METHODOLOGY.md).
+[Test results](evals/results/REPORT.md) · [Testing method](evals/METHODOLOGY.md)
 
 ## Inside the project
 

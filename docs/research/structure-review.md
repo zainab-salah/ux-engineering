@@ -25,7 +25,7 @@ Published examples use short descriptive identifiers such as `web-design-guideli
 ## Remaining quality gaps
 
 - The initial paired score tied. Broader independent runs and real user tasks are needed to establish effectiveness.
-- The React/public-API implementation comparison is separate work; source/build checks must not be presented as screenshots or browser success.
+- Source/build checks must not be presented as browser or usability success.
 - Automatic invocation accuracy, screen-reader behavior and npm registry publication are not established by this structure review.
 
 No private work-project source is needed for any of these improvements.
