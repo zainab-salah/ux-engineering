@@ -1,6 +1,6 @@
 # Implementation checklist
 
-Spec: `docs/superpowers/specs/ux-engineering.md`. Tracker: none.
+Spec: `docs/design/spec.md`. Tracker: none.
 
 - [x] Retrieve and sanitize project evidence; inspect named skills and primary standards.
 - [x] Write skill entry point, references, decisions and before/after examples.
