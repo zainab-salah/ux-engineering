@@ -1,0 +1,17 @@
+{
+  "name": "@zainab-salah/ux-engineering",
+  "version": "0.1.0",
+  "description": "UX best practices for AI coding agents: API integration, forms, tables, workflows and accessible frontend interactions.",
+  "license": "MIT",
+  "author": "Zainab Salah",
+  "type": "module",
+  "bin": {"ux-engineering": "bin/install.mjs"},
+  "files": ["bin/install.mjs", "skills/ux-engineering"],
+  "repository": {"type": "git", "url": "git+https://github.com/zainab-salah/ux-engineering.git"},
+  "homepage": "https://github.com/zainab-salah/ux-engineering#readme",
+  "bugs": {"url": "https://github.com/zainab-salah/ux-engineering/issues"},
+  "keywords": ["agent-skill", "agent-skills", "ux", "frontend", "accessibility", "forms", "crud", "react", "codex"],
+  "engines": {"node": ">=18"},
+  "publishConfig": {"access": "public"},
+  "scripts": {"test": "node --test tests/*.test.mjs"}
+}

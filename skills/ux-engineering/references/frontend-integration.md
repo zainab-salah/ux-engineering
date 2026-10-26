@@ -9,6 +9,10 @@ Reuse the repository's transport, form, validation, query/cache and design-syste
 - Handle pending, server validation and conflict states explicitly. Cancel or disregard stale lookup responses; do not let a late response repopulate the previous parent's options.
 - Use stable keys for repeatable rows; map server nested errors to their fields. Preserve dirty values on failed writes. Decide how background refresh affects a dirty form.
 
+## Choosing libraries
+
+Reuse installed, maintained tools before introducing another approach. For a nontrivial React CRUD app, established server-state tools such as TanStack Query or SWR can own caching, request lifecycle and invalidation; RHF with Zod can own form state and verified constraints when they fit the project. A component system can provide accessible dialog/selector primitives, but its composition still needs testing. Native controls remain suitable for simple cases. Explain what recurring problem a dependency solves, check the installed version's API, and avoid parallel fetch/form stacks or adding a library solely to make the project look advanced. Do not replace working architecture as part of a narrow UX correction.
+
 ## RHF and Zod when already used
 
 Initialize edit values from the stored record. Use the existing resolver and controlled-field integration for custom controls. Keep form values in the representation expected by the adapter; a DOM select normally produces a string. Convert only at the verified API boundary.
