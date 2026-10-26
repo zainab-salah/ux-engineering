@@ -42,6 +42,8 @@ Find usability problems and fix them while keeping the existing theme.
 
 The [before-and-after demo](evals/showcase/RESULTS.md) includes a customer workspace with 137 synthetic clients. Both versions are available to run. Browser screenshots are still pending.
 
+**Public API case study.** The same prompt ("build me a React frontend for DummyJSON products") was run without the skill, then the app was revised with it. [Screenshots, source for both apps and caveats](evals/public-api-react/RESULTS.md). It is one run with extra confounders, so it is a demonstration, not a benchmark.
+
 The first small agent comparison scored equally with and without the skill. I’m keeping the results public rather than claiming an improvement that hasn’t been demonstrated. Read the [test results](evals/results/REPORT.md) or [testing method](evals/METHODOLOGY.md).
 
 ## Inside the project
