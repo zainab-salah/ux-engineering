@@ -15,7 +15,7 @@ class ToolsTests(unittest.TestCase):
             {'id': 'recovery', 'passed': False, 'evidence': 'Output loses the draft'}]}]}
 
     def test_package_is_portable(self):
-        self.assertEqual(validate()['evaluation_scenarios'], 7)
+        self.assertEqual(validate()['evaluation_scenarios'], 9)
 
     def test_aggregation_counts_failed_criteria(self):
         self.assertEqual(summarize(self.grade)['with_skill']['pass_rate'], .5)

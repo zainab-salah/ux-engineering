@@ -50,3 +50,11 @@ For a horizontal toolbar, reuse the shell's flex/grid pattern with wrapping and 
 Use the serializer's accepted write keys, not every key in a response. Confirm filtering/search operators, pagination envelope, role/field access and nested validation shape. Submit only intended writable changes. Preserve ISO codes, stable IDs, decimals and dates. Exclude system-managed values from writes. Do not fabricate endpoints to make the UI appear complete.
 
 The executable `examples/client-patch.mjs` example is distributed in the repository, outside the installable skill. The skill remains usable without that development example. Its behavior is also described here: map selected objects to IDs/codes, require known fields, distinguish missing keys from explicit null, and filter writes by permission. Do not rely on the example file being installed with the skill.
+
+## Sensitive values and rich previews
+
+Reuse the product's credential, masking and content-rendering components. A masked value is a display state, not a replacement secret to send back on edit. Distinguish unchanged, replace and clear according to the contract; keep credentials out of URLs, logs, toasts and screenshots. Apply permitted masking consistently across table, detail and preview paths. Hiding a column does not authorize downloading restricted fields.
+
+Treat fetched email/template HTML as untrusted. Use an existing maintained sanitization or isolated-preview boundary appropriate to the threat model; do not interpolate it into the app DOM or rely on string replacement for safety. Confirm allowed links, remote assets and preview behavior against the product's policy. Test representative malicious content and editing payloads when changing these boundaries.
+
+For the rendering boundary, see [OWASP's XSS prevention guidance](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html). A masked UI or safe-looking preview is not proof of endpoint authorization or security.

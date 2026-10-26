@@ -2,6 +2,8 @@
 
 Use WCAG 2.2 AA as a design/review target when applicable, not as a conformance claim. APG describes interaction patterns; it does not certify a component or replace testing.
 
+Prefer native elements and landmarks, one useful primary page heading and a logical heading order. Keep meaningful text in the document, use descriptive alternatives for informative images and empty alternatives for purely decorative images. Add ARIA for semantics the native element cannot provide; it does not repair an inappropriate interaction.
+
 | Concern | Implementation and verification | Guidance |
 |---|---|---|
 | Names and instructions | Persistent labels, grouped choices with fieldset/legend where appropriate, visible requiredness and constraints. Placeholder alone is insufficient. | WCAG 1.3.1, 3.3.2, 4.1.2 |

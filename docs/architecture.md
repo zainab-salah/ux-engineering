@@ -4,6 +4,8 @@
 
 The installable directory is `skills/ux-engineering`. Discovery exposes its name and description. Loading `SKILL.md` selects design or audit mode and gives the core evidence-to-decision workflow. The agent loads only references needed for its current task: backend interpretation, interaction decisions, workflow/feedback, layout/consistency, accessibility, audit, stack integration or cases.
 
+Conditional resilience guidance routes supplied-composition tasks to `reference-fidelity.md`. That reference preserves the brief, assets and responsive relationships without making portfolio styling or animation a default for operational screens. Secondary history summaries are documented separately from directly retrieved cases.
+
 No parser, model endpoint, MCP server, external skill or hardcoded component library is required. Research and evaluation files remain outside the installed skill so normal usage does not load transcripts, expected answers or benchmark tooling.
 
 ```mermaid

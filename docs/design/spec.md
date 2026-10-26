@@ -11,3 +11,7 @@ Use synthetic contract and code fixtures for positive, negative and ambiguous de
 Review against the actual empty workspace and retrieved artifacts: no production callers or migrations to change. The adapter's callers are its example tests. Validation tooling reaches CI, tests and usage instructions. Do not install globally, create a GitHub repository or publish as part of preparation.
 
 Acceptance: portable references resolve within the skill; tools pass meaningful self-checks; examples preserve data representations; paired evidence and limitations are documented; README and contribution steps work from the repository root. No ADR is required: stdlib development tools and Markdown packaging are reversible implementation choices.
+
+## Maintainer-history refinement
+
+The current authorized scope adds concrete create/edit choice controls, viewport-fitted operational table shells, restrained copy, fresh-load action checks, truthful data/defaults, sensitive-value boundaries and conditional reference fidelity. Evidence includes three maintainer-supplied summaries; distinguish them from original transcripts and verified outcomes. Extend synthetic fixtures without rewriting the earlier pilot scores. Keep the core concise, add no runtime dependencies, and preserve every existing installation/payload boundary. The maintainer subsequently authorized GitHub/npm publication and requested removing the public-API React showcase; these later instructions supersede the preparation-only publication boundary above.

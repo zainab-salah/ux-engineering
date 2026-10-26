@@ -44,3 +44,9 @@ Added `evals/showcase` with independent baseline and skill-assisted refinement a
 ## Guidance update after the demo review
 
 The public-API React comparison was removed at the maintainer’s request; it is not evidence for the current revision. The skill now explicitly requires viewport-fitted operational table shells with internal row scrolling and visible pagination/footer, implementation of suitable create/edit controls (including searchable country/time-zone selectors), and restrained explanatory copy. The existing layout/ambiguous fixtures were updated but not behaviorally rerun. Package checks and regression tests validate packaging/tooling only.
+
+## Additional supplied-history guidance
+
+Three maintainer-supplied conversation summaries informed a separately documented history supplement. New guidance covers fresh-load first activation, truthful widgets and initial ranges, confirmed panel completion, date-filter timezone boundaries, masked credential writes, rich-content previews and conditional reference fidelity. Two new synthetic scenarios bring the suite to nine. The updated ambiguous-fields case contrasts a searchable closed time-zone catalogue with open territory text. These cases are authored and unrun; no new paired result, browser result, performance score or security result is claimed. The original relationship tie remains unchanged.
+
+Validation of this revision: the portable skill validator passed with a 53-line core and nine fixture paths; all nine Python tests and five Node tests passed. Link, rubric-coverage and package-allowlist checks also passed. These checks do not grade the new agent scenarios.

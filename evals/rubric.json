@@ -52,7 +52,7 @@
       "Distinguish static findings from rendered checks"
     ],
     "5": [
-      "Keep open reference/territory inputs",
+      "Keep open reference/territory inputs; use searchable approved time-zone choices, preserving IANA IDs, edit selection and null/omission without a country restriction",
       "Keep numeric precision",
       "Make deferred enabled setting clear",
       "No default for consequential plan",
@@ -74,6 +74,22 @@
       "Fixes popup clipping and keyboard/footer reachability at their source",
       "Removes unnecessary motion and uses confirmed pending/error/saved states",
       "Plans representative runtime checks without claiming them"
+    ],
+    "8": [
+      "Fixes first activation and mobile navigation, with fresh-load pointer/keyboard checks",
+      "Separates loading/unavailable/zero, removes unsupported actions and preserves explicit account context",
+      "Uses saved-zone calendar boundaries and endpoint inclusivity, including a DST test without changing date-only fields",
+      "Closes and restores focus only after confirmed role save; retains failed/uncertain drafts and updates the row",
+      "Preserves omitted/replaced/cleared credential semantics and keeps secrets out of logs",
+      "Reuses the maintained safe preview boundary and proposes focused rendered/security checks without claiming them"
+    ],
+    "9": [
+      "Matches static composition constraints before motion; acknowledges missing visual reference",
+      "Preserves responsive anchors, readable contribution cells, interior padding and reachable actions",
+      "Honors latest supplied-asset restriction and checks cropping/transparency without inventing artwork",
+      "Keeps content available with reduced/no motion and scopes keyboard actions correctly",
+      "Avoids per-frame React state and offscreen expensive work; rejects score gaming",
+      "Preserves truthful project data/private-project boundaries and scopes browser checks without exporting the style to CRUD"
     ]
   }
 }

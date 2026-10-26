@@ -6,6 +6,14 @@ Trace entry → selection/input → submit → result → next use. For a saved 
 
 Read permissions at page, action and field levels. A writable phone field should remain usable when address is read-only. Do not show restricted data or queries, and exclude unauthorized fields from payloads. Hiding an input does not secure its endpoint. Explain an available but disabled action's blocker when helpful; hide irrelevant or forbidden information according to the product's privacy rules.
 
+## Honest data and useful starting state
+
+Trace each visible metric, preview and action to its actual source and supported behavior. Do not fill unavailable values with invented totals, display loading as zero, or leave decorative actions that do nothing. Hide irrelevant unsupported UI, or explain an essential unavailable capability honestly. Label synthetic/demo data and simulated writes when they are part of an explicitly requested example; never pass them off as persisted production behavior.
+
+Choose initial filters from the task and available metadata. An arbitrary recent range can make a functioning dashboard appear empty when all activity is older. Use a supported first-activity date or an intentional empty state when appropriate; do not download the full history just to discover a default. Preserve explicit user filters and tenant/account context. Never silently switch companies or permissions to obtain populated charts.
+
+Verify completion as well as submission. If the product's save flow should close a role drawer, close it only after confirmed success, refresh the relevant row and restore useful focus. Failed or uncertain saves retain the draft and recovery path. Keep a deliberate Save-and-continue flow open when that is the actual task.
+
 ## Dependencies
 
 - Derive safe context where the server does: choosing a bot may determine company. Do not ask for a second independent company field that could contradict it.

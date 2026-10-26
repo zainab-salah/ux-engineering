@@ -44,7 +44,7 @@
       "files": [
         "fixtures/ambiguous-fields.md"
       ],
-      "expected_output": "Open references/territory remain text, exact numeric priority remains precise, deferred enabled choice clear, costly plan no guessed default, copyable system ID and scoped unknowns. Remove helper text that merely repeats labels; retain the numeric range and meaningful plan consequences. Recommendations become actual control/payload changes when implementation is requested."
+      "expected_output": "Open references/territory remain text; the closed preferred-time-zone catalogue uses a searchable selector with readable labels, stored IANA IDs and edit selection retained outside search results. Preserve null versus omission and do not infer a country restriction. Exact numeric priority remains precise, deferred enabled choice clear, costly plan no guessed default, copyable system ID and scoped unknowns. Remove helper text that merely repeats labels; retain the numeric range and meaningful plan consequences. Recommendations become actual control/payload changes when implementation is requested."
     },
     {
       "id": 6,
@@ -63,6 +63,20 @@
         "fixtures/multilingual-refinement.md"
       ],
       "expected_output": "Correct popup/keyboard states, native RTL and mixed-direction text, locale display without changing precise wire values, purposeful motion, confirmed save feedback and no collateral redesign."
+    },
+    {
+      "id": 8,
+      "name": "startup-data-audit",
+      "prompt": "Audit startup-data-audit.md. Rank evidence-backed issues by consequence, propose the smallest complete corrections, preserve the contract and explain verification still required. Do not implement a new app or claim runtime checks.",
+      "files": ["fixtures/startup-data-audit.md"],
+      "expected_output": "Working first activation and mobile navigation, truthful metrics and supported actions, account context preserved, zone-correct calendar boundaries, confirmed drawer completion with recoverable failure, safe credential payloads and reuse of the existing safe HTML preview."
+    },
+    {
+      "id": 9,
+      "name": "reference-responsive",
+      "prompt": "Plan the scoped correction in reference-responsive.md. Preserve its supplied composition contract, content and asset restrictions; cover responsive structure, motion, data truth, integration boundaries and realistic verification. Do not generate artwork or claim visual comparison without the missing reference.",
+      "files": ["fixtures/reference-responsive.md"],
+      "expected_output": "Static composition and responsive anchors before optional motion; latest asset restrictions honored; readable data and padding; content available without animation; reduced motion, scoped shortcuts and offscreen performance; truthful public/private project evidence; missing reference and browser checks disclosed without imposing the portfolio style on CRUD."
     }
   ]
 }

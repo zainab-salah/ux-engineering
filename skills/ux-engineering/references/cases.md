@@ -30,7 +30,7 @@ These are generalized examples informed by retrieved project history. Exact sour
 
 **Before:** Repeated page/card/table titles, a separate search row, oversized controls and large empty panels push useful records below the fold. A short table's capped container leaves pagination floating above unused space.
 
-**After:** Keep one useful title at each level, align related search/filter/actions in a wrapping toolbar, reuse control sizes and group related content. Use the existing full-height table shell where that page calls for one. Retain appropriate mobile spacing, bounded table overflow, visible focus and reachable pagination.
+**After:** Keep one useful title at each level, align related search/filter/actions in a wrapping toolbar, reuse control sizes and group related content. Use the existing full-height table shell where that page calls for one: rows scroll in the bounded table region while the toolbar and footer/pagination stay visible outside it. Retain appropriate mobile spacing, visible focus and a reachable fallback when a short viewport cannot fit the full stack.
 
 **Reason:** Use the viewport for the task. Removing structure, shrinking text, and fixing every footer to the viewport are not substitutes for a coherent layout.
 

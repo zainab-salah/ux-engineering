@@ -44,7 +44,7 @@ For multilingual, motion-heavy, slow-network, or tightly scoped refinements, rea
 
 ## Verify and self-correct
 
-Check the actual task with representative data, including long labels, empty results, a selected value absent from the current result page, restricted fields, failed saves, and a narrow viewport. For tables, check filter/sort/pagination and selection scope against the full server result set. For layout, inspect both short and long pages; a screenshot of the default screen is insufficient evidence of workflow completion.
+Check the actual task from a fresh load, including the first activation of navigation, theme and primary controls. Use representative data: long labels, empty results, a selected value absent from the current result page, restricted fields, failed saves and a narrow viewport. For tables, check filter/sort/pagination and selection scope against the full server result set. For layout, inspect both short and long pages; a screenshot of the default screen is insufficient evidence of workflow completion.
 
 Use focused tests for contract-sensitive changes and browser/keyboard checks for rendered behavior when available. Do not claim a browser check, accessibility conformance, or usability improvement from static inspection alone. When checks reveal a problem, fix the shared cause and recheck affected callers. Keep backend gaps distinct from frontend defects.
 

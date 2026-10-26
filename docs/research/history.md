@@ -10,6 +10,8 @@ I also checked selected current CRM and Chatbot Manager files to separate what w
 
 Local reproducibility notes, thread identifiers, selected quotes and source locations are supplied separately from this publishable repository. Public case IDs below link principles to evidence without publishing private conversations.
 
+A later [maintainer-supplied history supplement](history-supplement.md) adds six grouped lessons from three consolidated project summaries. Its secondary-evidence limits are documented separately; it does not expand the original transcript-retrieval claims above.
+
 ## Retrieved examples
 
 ### H01 — CRM: an unreachable filter builder

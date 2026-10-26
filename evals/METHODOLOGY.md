@@ -34,6 +34,8 @@ Use S0–S3 task-impact severity from the skill. For audit studies, report preci
 
 Case 5 rejects automatic dropdowns for unknown external references and free-form territory; exact numeric priority is not a select; a read-only ID remains copyable. Costly choices require no guessed default. Case 2 tests the danger of inventing a 3000-character backend maximum from an approximate stakeholder note. Missing permissions/actions must be identified without blocking independent work.
 
+The updated case 5 contrasts open territory with an approved closed time-zone catalogue, including edit hydration and null/omission. Case 8 adds startup, real-data, calendar-boundary and sensitive-edit failures. Case 9 tests reference-led work without exporting portfolio aesthetics to operational screens, and rejects performance score gaming or invented private-project evidence. These additions are authored fixtures, not completed agent runs; earlier pilot grades do not evaluate them.
+
 ## Suggested trigger evaluation
 
 Positive prompts: “Wire owner assignment from this DRF serializer”; “Audit why this CRUD screen makes users type IDs”; “Fix duplicated admin headings and mismatched shared controls while keeping the theme.”
