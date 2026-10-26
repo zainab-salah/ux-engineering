@@ -1,0 +1,18 @@
+{
+  "base": "/api",
+  "variant": "Every request uses variant=baseline or variant=with-skill to isolate writes",
+  "clients": {
+    "GET /api/clients": "Query search (case-insensitive name/email across ALL records), status (new/contacted/closed or empty), country (TR/DE/GB/US/FR or empty), ordering (name/-name), page (1-based), page_size (10/25). Response {count,results:[client]}. Filters combine with AND. Changing filters should reconcile pagination.",
+    "GET /api/clients/{id}": "Returns complete client including owner {id,name,desk}, or 404",
+    "POST /api/clients": "JSON {name,country,status,owner_id?}. Name nonblank max120; country is a supported code; status exact enum; owner_id opaque string or null. 201 returns client. 400 {field:[messages]}; non_field_errors possible.",
+    "PATCH /api/clients/{id}": "Only changed write keys: name,country,status,owner_id. Omitted preserves, null explicitly clears owner. No writes to id,email,created_at or owner object. 200 returns client; 400 field errors. Name with substring FAIL (case-insensitive) simulates 503 {detail: Temporary service failure; retry with another name}. No writes occur on this simulated failure.",
+    "client": "{id,name,email,country,status,owner_id,owner:{id,name,desk}|null,created_at}. Strings are synthetic. Dataset includes client named Zulu Search Target at the end; do not hardcode it into the UI."
+  },
+  "owners": {
+    "GET /api/owners": "Query search (case-insensitive name/desk), page (1-based). Returns {count,results:[{id,name,desk}]}; 8 per page, 41 total. Includes repeated name Alex Morgan on different desks. Search covers entire eligible set.",
+    "GET /api/owners/{id}": "Resolve selected owner even outside current search page. 200 {id,name,desk} or 404. No owner creation."
+  },
+  "countries": {"GET /api/countries": "Returns [{code,label}] for TR Türkiye, DE Germany, GB United Kingdom, US United States, FR France"},
+  "status": ["new", "contacted", "closed"],
+  "testing": "The static page can be served at /baseline/ or /with-skill/. The browser evaluator may use synthetic FAIL names to test recovery. No auth, secrets, external users, durable database or real customer records. Restart resets datasets."
+}

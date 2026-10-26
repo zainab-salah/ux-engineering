@@ -1,0 +1,68 @@
+{
+  "skill_name": "ux-engineering",
+  "evals": [
+    {
+      "id": 1,
+      "name": "relationships",
+      "prompt": "Design the create and edit client interactions from relationship-contract.json. Explain control choices, data loading, states, payload preservation and verification. Provide a concise implementation-ready decision note, not application code. Work from the supplied contract; call out essential unknowns.",
+      "files": [
+        "fixtures/relationship-contract.json"
+      ],
+      "expected_output": "Names mapped to stable IDs/country codes, server-backed relationship search, current selection preserved, appropriate status choice and open territory input."
+    },
+    {
+      "id": 2,
+      "name": "complex-template",
+      "prompt": "Plan the template editor interaction from complex-template.md using the existing stack. Cover fields, permissions, dependencies, validation, failure recovery and verification. Produce an implementation-ready decision note without writing the app.",
+      "files": [
+        "fixtures/complex-template.md"
+      ],
+      "expected_output": "Override semantics and required prompt preserved, no invented 3000-character backend maximum, structured repeatable fields, parent-dependent owner and recoverable saves."
+    },
+    {
+      "id": 3,
+      "name": "crud-audit",
+      "prompt": "Audit crud-audit.tsx against its documented API for meaningful UX problems. Rank findings by task impact, cite code evidence, explain the smallest correction and verification. Do not rewrite the app or claim a rendered check.",
+      "files": [
+        "fixtures/crud-audit.tsx"
+      ],
+      "expected_output": "Evidence-backed findings on current-page filtering, misleading selection scope, raw owner IDs, per-field permissions, draft loss, incomplete preset reuse, missing labels and pending feedback."
+    },
+    {
+      "id": 4,
+      "name": "layout-audit",
+      "prompt": "Audit layout-audit.html for an operational admin interface. It should use its existing compact theme and full-height shell. Identify concrete layout, interaction and accessibility issues and propose the smallest coherent corrections. Cover inner pages and different screen sizes. Static inspection only; report verification still needed.",
+      "files": [
+        "fixtures/layout-audit.html"
+      ],
+      "expected_output": "Unnecessary scrolling and repeated titles reduced, related toolbar items aligned and wrapped, shared compact controls, correct table/footer height reasoning, focus retained, borders consistent without universal aesthetic rules."
+    },
+    {
+      "id": 5,
+      "name": "ambiguous-fields",
+      "prompt": "Choose interactions for ambiguous-fields.md. Explain which should be text, selection or read-only controls, why, what must remain unchanged in requests and what questions are essential before actions are implemented. Keep the response concise and avoid inventing APIs.",
+      "files": [
+        "fixtures/ambiguous-fields.md"
+      ],
+      "expected_output": "Open references/territory remain text, exact numeric priority remains precise, deferred enabled choice clear, costly plan no guessed default, copyable system ID and scoped unknowns."
+    },
+    {
+      "id": 6,
+      "name": "pagination-workflow",
+      "prompt": "Design the request list and bulk-cancel flow in pagination-workflow.md. Explain navigation, filtering, selection, mobile, recovery and backend invariants. Produce a decision note without code or new endpoints.",
+      "files": [
+        "fixtures/pagination-workflow.md"
+      ],
+      "expected_output": "Stable paginated comparison, full-result server filters, explicit selection scope, confirmed eligible cancellation, preserved history and return state, no unsupported deletion."
+    },
+    {
+      "id": 7,
+      "name": "multilingual-refinement",
+      "prompt": "Propose scoped corrections for multilingual-refinement.md. Preserve existing behavior and theme; explain contract invariants, interaction choices, verification and remaining unknowns. Do not implement the application or claim rendered testing.",
+      "files": [
+        "fixtures/multilingual-refinement.md"
+      ],
+      "expected_output": "Correct popup/keyboard states, native RTL and mixed-direction text, locale display without changing precise wire values, purposeful motion, confirmed save feedback and no collateral redesign."
+    }
+  ]
+}

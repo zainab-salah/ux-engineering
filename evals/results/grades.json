@@ -1,0 +1,105 @@
+{
+  "method": "Manual author grading of one independent paired scenario; static decision outputs only",
+  "runs": [
+    {
+      "case_id": 1,
+      "condition": "with_skill",
+      "status": "complete",
+      "judge": "author manual rubric review; not blind",
+      "output": "iteration-1/eval-1-relationships/with_skill/outputs/decision.md",
+      "criteria": [
+        {
+          "id": "component-selection",
+          "passed": true,
+          "evidence": "Status radio group; Sales territory optional free-text; Owner searchable picker."
+        },
+        {
+          "id": "wire-values",
+          "passed": true,
+          "evidence": "Owner ID, country code, exact enum; Created at never included in writes."
+        },
+        {
+          "id": "relationship-coverage",
+          "passed": true,
+          "evidence": "Loading and relationship resolution sections retain selected owner separately and use detail endpoint."
+        },
+        {
+          "id": "validation-recovery",
+          "passed": true,
+          "evidence": "Payload/save sections distinguish null from omission; no automatic POST retry after uncertain result."
+        },
+        {
+          "id": "accessibility",
+          "passed": true,
+          "evidence": "Labels/keyboard/error associations in controls and verification sections; checks explicitly static."
+        },
+        {
+          "id": "backend-boundary",
+          "passed": true,
+          "evidence": "Essential contract gaps identifies missing read/update operations and search parameter syntax."
+        }
+      ]
+    },
+    {
+      "case_id": 1,
+      "condition": "without_skill",
+      "status": "complete",
+      "judge": "author manual rubric review; not blind",
+      "output": "iteration-1/eval-1-relationships/without_skill/outputs/decision.md",
+      "criteria": [
+        {
+          "id": "component-selection",
+          "passed": true,
+          "evidence": "Status radio group; Sales territory optional free-text; Owner searchable picker."
+        },
+        {
+          "id": "wire-values",
+          "passed": true,
+          "evidence": "Owner ID, country code, exact enum; Created at never included in writes."
+        },
+        {
+          "id": "relationship-coverage",
+          "passed": true,
+          "evidence": "Loading and relationship resolution sections retain selected owner separately and use detail endpoint."
+        },
+        {
+          "id": "validation-recovery",
+          "passed": true,
+          "evidence": "Payload/save sections distinguish null from omission; no automatic POST retry after uncertain result."
+        },
+        {
+          "id": "accessibility",
+          "passed": true,
+          "evidence": "Labels/keyboard/error associations in controls and verification sections; checks explicitly static."
+        },
+        {
+          "id": "backend-boundary",
+          "passed": true,
+          "evidence": "Essential contract gaps identifies missing read/update operations and search parameter syntax."
+        }
+      ]
+    },
+    {
+      "case_id": 2,
+      "condition": "with_skill",
+      "status": "ungraded",
+      "output": "iteration-1/eval-2-complex-template/with_skill/outputs/decision.md",
+      "criteria": []
+    },
+    {
+      "case_id": 2,
+      "condition": "without_skill",
+      "status": "incomplete",
+      "reason": "Agent ended with account usage-limit error after writing an output. Excluded from scored comparisons.",
+      "output": "iteration-1/eval-2-complex-template/without_skill/outputs/decision.md",
+      "criteria": []
+    },
+    {
+      "case_id": 4,
+      "condition": "without_skill",
+      "status": "ungraded",
+      "output": "iteration-1/eval-4-layout-audit/without_skill/outputs/decision.md",
+      "criteria": []
+    }
+  ]
+}

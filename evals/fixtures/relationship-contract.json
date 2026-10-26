@@ -1,0 +1,18 @@
+{
+  "openapi": "3.1.1",
+  "info": {"title": "Synthetic service desk", "version": "1"},
+  "paths": {
+    "/clients/": {"post": {"requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ClientWrite"}}}}, "responses": {"201": {"description": "Created"}, "400": {"description": "Field errors"}}}},
+    "/users/": {"get": {"description": "Permission-scoped active users, server search by name, paginated 25 at a time. Returns {count,next,previous,results:[{id,name,desk}]}; roughly 13000 eligible records.", "responses": {"200": {"description": "Paginated users"}}}},
+    "/users/{id}/": {"get": {"parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}], "description": "Resolves an accessible selected user, including inactive current owners; 404 if unavailable.", "responses": {"200": {"description": "{id,name,desk,is_active}"}, "404": {"description": "Unavailable"}}}},
+    "/countries/": {"get": {"description": "Complete supported ISO alpha-2 catalogue [{code,label}] in requested locale.", "responses": {"200": {"description": "Country options"}}}}
+  },
+  "components": {"schemas": {"ClientWrite": {"type": "object", "required": ["name", "country", "status"], "properties": {
+    "name": {"type": "string", "maxLength": 120},
+    "country": {"type": "string", "minLength": 2, "maxLength": 2, "description": "Validated against supported ISO alpha-2 countries"},
+    "owner_id": {"type": ["string", "null"], "description": "Opaque stable user ID; null clears; omitted preserves on PATCH"},
+    "status": {"type": "string", "enum": ["new", "contacted", "closed"], "description": "Required; no default. Operators compare these statuses during initial triage."},
+    "sales_territory": {"type": "string", "description": "Optional user-defined label; previous values are suggestions, not an allowed list"},
+    "created_at": {"type": "string", "format": "date-time", "readOnly": true}
+  }}}}
+}

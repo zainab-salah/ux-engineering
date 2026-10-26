@@ -1,0 +1,61 @@
+{
+  "scope": "Actual HTTP API checks; no browser UI was exercised",
+  "checks": [
+    {
+      "check": "baseline full count and page size",
+      "passed": true
+    },
+    {
+      "check": "baseline different page",
+      "passed": true
+    },
+    {
+      "check": "baseline full-set search",
+      "passed": true
+    },
+    {
+      "check": "baseline off-page owner search",
+      "passed": true
+    },
+    {
+      "check": "baseline combined filters",
+      "passed": true
+    },
+    {
+      "check": "baseline simulated write failure",
+      "passed": true
+    },
+    {
+      "check": "baseline failed write unchanged",
+      "passed": true
+    },
+    {
+      "check": "with-skill full count and page size",
+      "passed": true
+    },
+    {
+      "check": "with-skill different page",
+      "passed": true
+    },
+    {
+      "check": "with-skill full-set search",
+      "passed": true
+    },
+    {
+      "check": "with-skill off-page owner search",
+      "passed": true
+    },
+    {
+      "check": "with-skill combined filters",
+      "passed": true
+    },
+    {
+      "check": "with-skill simulated write failure",
+      "passed": true
+    },
+    {
+      "check": "with-skill failed write unchanged",
+      "passed": true
+    }
+  ]
+}

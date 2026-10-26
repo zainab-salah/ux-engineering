@@ -1,0 +1,79 @@
+{
+  "scoring": "Binary criterion only when directly evidenced; unknown is ungraded, not a pass. Contextual alternatives can pass.",
+  "cases": {
+    "1": [
+      {
+        "id": "component-selection",
+        "criterion": "Uses visible status options, open territory text, and a scoped owner selector."
+      },
+      {
+        "id": "wire-values",
+        "criterion": "Submits stable IDs/codes and excludes created_at."
+      },
+      {
+        "id": "relationship-coverage",
+        "criterion": "Searches server pages and preserves an unavailable/inactive current selection."
+      },
+      {
+        "id": "validation-recovery",
+        "criterion": "Preserves draft and distinguishes explicit clear, omission, lookup errors and uncertain POST."
+      },
+      {
+        "id": "accessibility",
+        "criterion": "Specifies labels, keyboard operation and associated feedback without claiming rendered verification."
+      },
+      {
+        "id": "backend-boundary",
+        "criterion": "Identifies missing edit/read contracts and does not fabricate them."
+      }
+    ],
+    "2": [
+      "Preserve required base prompt and override semantics",
+      "No invented 3000-character cap",
+      "Stable ordered rows and nested errors",
+      "Per-field writes and desk-owner dependency",
+      "Draft/conflict/unknown-outcome recovery",
+      "Keyboard/timezone and responsive verification plan"
+    ],
+    "3": [
+      "Identify local-page search mismatch",
+      "Identify false all-results selection scope",
+      "Identify raw relationship ID input/display",
+      "Identify field permission mismatch",
+      "Identify draft loss and missing pending behavior",
+      "Identify incomplete preset lifecycle and labels; rank by consequence"
+    ],
+    "4": [
+      "Identify excess padding and duplicate headings",
+      "Align/wrap related toolbar items",
+      "Use existing control size/border tokens",
+      "Reason through shell/table/footer heights",
+      "Restore focus and labels",
+      "Distinguish static findings from rendered checks"
+    ],
+    "5": [
+      "Keep open reference/territory inputs",
+      "Keep numeric precision",
+      "Make deferred enabled setting clear",
+      "No default for consequential plan",
+      "Retain copyable read-only ID",
+      "Identify essential action unknowns without fabricating APIs"
+    ],
+    "6": [
+      "Use stable paginated comparison and return state",
+      "Use server filters with page reconciliation",
+      "Explicit visible/all-matching selection and count",
+      "Preview/confirm eligible cancellation",
+      "Preserve completed history",
+      "Mobile keyboard/recovery plan without invented delete"
+    ],
+    "7": [
+      "Preserves copy, theme, permissions and adapter",
+      "Keeps decimal precision and wire representations",
+      "Uses proper RTL and mixed-direction isolation without string reversal",
+      "Fixes popup clipping and keyboard/footer reachability at their source",
+      "Removes unnecessary motion and uses confirmed pending/error/saved states",
+      "Plans representative runtime checks without claiming them"
+    ]
+  }
+}

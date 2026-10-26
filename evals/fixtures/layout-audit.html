@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Synthetic client directory</title>
+<style>
+  /* Existing product tokens and intended full-height operational shell. */
+  :root { --control-height: 2rem; --space: .5rem; --border: #8a8a8a; --focus: #125dd1; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui; }
+  .shell { height: 100dvh; display: flex; flex-direction: column; }
+  header { height: 3rem; flex-shrink: 0; }
+  main { padding: 80px; }
+  h1 { margin-bottom: 60px; }
+  .panel { padding: 60px; border-left: 8px solid purple; border-radius: 24px; }
+  .toolbar { width: 900px; display: flex; gap: 40px; }
+  input { height: 56px; padding: 20px; }
+  select { height: 34px; }
+  button { height: 64px; }
+  button:focus, input:focus, select:focus { outline: none; }
+  .table-region { height: 180px; overflow: auto; }
+  .empty { min-height: 300px; padding: 80px; }
+</style>
+<div class="shell"><header>Operations</header><main>
+  <h1>Client directory</h1><div class="panel"><h2>Client directory</h2>
+    <div class="toolbar"><input placeholder="Search clients"><select aria-label="Status"><option>All statuses</option></select></div>
+    <div><button>Add client</button></div>
+    <table class="table-region"><caption>Client directory</caption><thead><tr><th>Name</th><th>Status</th></tr></thead><tbody><tr><td>Sample client</td><td>New</td></tr></tbody></table>
+    <nav aria-label="Pagination"><button>Previous</button><span>Page 1 of 12</span><button>Next</button></nav>
+    <section class="empty"><h2>No recent activity</h2><p>Select a client to inspect activity.</p></section>
+  </div></main></div></html>

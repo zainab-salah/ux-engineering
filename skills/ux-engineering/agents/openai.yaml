@@ -1,0 +1,4 @@
+interface:
+  display_name: "UX Engineering"
+  short_description: "Turn backend rules into usable frontend workflows"
+  default_prompt: "Use $ux-engineering to inspect the backend contract and design or audit the frontend interaction, preserving the API behavior and existing design system."

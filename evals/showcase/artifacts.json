@@ -1,0 +1,12 @@
+{
+  "method": "Independent baseline followed by fresh skill-assisted refinement of a copy",
+  "model": "Host default; exact model revision/telemetry unavailable",
+  "files": {
+    "BRIEF.md": "19da138ebe0b5eef6961374c02796d38dcfcad600d58c33380d3d28ad4c6ef96",
+    "contract.json": "6f63f063466088530e7ed2c88bfe15b5d7978bcd70d45e572dea578055be96be",
+    "PROTOCOL.md": "347dafcfd7c98d053491bc12f409ca819d4722e85f7da76fc7bd85e89a75fee4",
+    "baseline/index.html": "79344ceaebbeb6ca4f639dc862a382df012f45da71235ed173d9512602fc0962",
+    "with-skill/index.html": "62bcbcec1dabe65fd857b9eb4d642ab1ea959d747aca8da9bdb3769beeb1d1cc"
+  },
+  "browser_status": "Blocked by Local browser use disabled; no runtime UI results"
+}
